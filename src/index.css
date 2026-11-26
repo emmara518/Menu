@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-yellow: #FFC400;
+    --brand-gold: #D4A54A;
+    --brand-black: #0B0908;
+    --brand-espresso: #1B120C;
+    --brand-cream: #F7E8D6;
+    --brand-red: #D72626;
+    --brand-emerald: #0F5132;
+  }
+
+  html {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    background-color: #0B0908;
+    color: #F7E8D6;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0B0908;
+    color: #F7E8D6;
+    overflow-x: hidden;
+  }
+}
+
+.font-latin {
+  font-family: 'DM Sans', 'Cairo', sans-serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Warm roasted espresso-obsidian luxury canvas */
+.espresso-luxury-bg {
+  background-color: #0B0908;
+  background-image:
+    radial-gradient(ellipse 85% 55% at 50% 14%, rgba(122, 72, 34, 0.22), transparent 72%),
+    radial-gradient(circle at 12% 82%, rgba(255, 196, 0, 0.06), transparent 45%);
+}
+
+/* Subtle paper texture overlay for cream surfaces */
+.cream-paper-surface {
+  background-color: #F7E8D6;
+  background-image: radial-gradient(rgba(11, 9, 8, 0.04) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
